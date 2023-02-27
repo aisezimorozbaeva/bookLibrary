@@ -1,0 +1,55 @@
+:root {
+    --color-main: rgb(114, 43, 255);
+    --color-main-opac: rgba(114, 43, 255, 0.3);
+    --color-dark: #3c4257;
+}
+
+.container-wrapper {
+    height: 100vh;
+    padding-top: 30px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: linear-gradient(
+            235deg,
+            rgba(64, 83, 206, 0.123) 48%,
+            rgba(250, 68, 32, 0.767) 163%
+    ),
+    linear-gradient(
+            163deg,
+            rgba(49, 146, 170, 0.0794448997) 86%,
+            rgba(130, 77, 255, 0.3) 40%
+    ),
+    linear-gradient(
+            30deg,
+            rgba(199, 255, 236, 0.3) 22%,
+            rgba(237, 106, 134, 0.5) 169%
+    ),
+    linear-gradient(
+            205deg,
+            var(--color-main-opac) 64%,
+            rgba(247, 126, 132, 0.5) 43%
+    );
+    background-blend-mode: overlay, multiply, color, normal;
+}
+.container-custom {
+    background: white;
+    max-width: 480px;
+    box-shadow: 3px 5px 6px 5px var(--color-main-opac);
+    color: var(--color-dark);
+}
+
+.btn-custom {
+    background-color: var(--color-main);
+    color: white;
+    width: 100%;
+    font-weight: 600;
+}
+.btn-custom:hover {
+    background-color: var(--color-main-opac);
+}
+#message {
+    color: red;
+}
+#message.hidden {
+    display: none;
+}

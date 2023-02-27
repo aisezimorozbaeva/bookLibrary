@@ -1,0 +1,274 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Book Store</title>
+
+</head>
+<body>
+<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark ">
+    <div class="container-fluid p-3 bd-light">
+        <a class="navbar-brand " href="#" >Book Store</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/bookList">Бесплатные книги</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Новые книги</a>
+                </li>
+            </ul>
+            <div class="col-md-5">
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Поиск автора или книги" aria-label="Search">
+                    <button class="btn btn-primary my-2 my-sm-0" type="submit" >Поиск<i class="fa-regular fa-magnifying-glass"></i></button>
+                </form>
+            </div>
+        <div>
+            <a href="/sign_up" class="btn btn-success">Регистрация</a>
+        </div>
+        </div>
+
+    </div>
+</nav>
+<div class="container-fluid back-img">
+    <img alt="" src="/img/booky.jpg"  style="height: 50vh;
+    width: 100%; background-size:cover;background-repeat: no-repeat">
+</div>
+
+<div class="container text-center my-5">
+    <h1>WELCOME TO NEW BOOK STORE</h1>
+    <h6>
+        Несмотря на возросшую популярность телевидения, интернета и прочих современных развлечений,
+        люди до сих пор не перестают читать. Выбрать книгу себе по вкусу далеко не так просто, особенно в области
+        художественной литературы: каждый читатель должен подходить к этому вопросу индивидуально, чтобы в итоге не быть
+        разочарованным в сюжете или в стиле автора, не жалеть о потраченном времени. Чтобы хоть немного помочь вам в этом вопросе,
+        мы составили топ рейтинг лучших книг года по отзывам пользователей и постарались быть как можно более объективными.
+        Сюда вошли как небольшие повести, так и целые эпосы, здесь вы встретите и отечественных, и зарубежных авторов. Итак, приступим.
+    </h6>
+    <img src="/img/girs.png" width="360px"/>
+
+</div>
+<div class="container">
+    <h3 class="text-center">Recent Book</h3>
+    <div class="row">
+        <div class="col-md-3">
+            <div class="card crd-ho">
+                <div class="card-body text-center">
+                    <img alt="" src="/img/javabeginner.jpg"
+                         style="width: 150px;height: 200px"class="img-thumblin">
+                    <p>Data Structures </p>
+                    <p>Algorithms</p>
+                    <p>Categories:New</p>
+                    <div class="row">
+                        <a href="" class="btn btn-danger btn-sm ">Add Cart</a><a
+                            href="" class="btn btn-success btn-sm">View Details</a><a
+                            href="" class="btn btn-danger btn-sm ">299</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card crd-ho">
+                <div class="card-body text-center">
+                    <img alt="" src="/img/djon.jpg"
+                         style="width: 150px;height: 200px"class="img-thumblin">
+                    <p>Джон Гришем </p>
+                    <p>Детектив</p>
+                    <p>Categories:New</p>
+                    <div class="row">
+                        <a href="" class="btn btn-danger btn-sm ml-2">Добавит<i class="fa-solid fa-cart-shopping-fast"></i></a><a
+                            href="" class="btn btn-success btn-sm ml-1">Посмотреть</a><a
+                            href="" class="btn btn-danger btn-sm ml-1">299</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card crd-ho">
+                <div class="card-body text-center">
+                    <img alt="" src="/img/magiaytra.jpg"
+                         style="width: 150px;height: 200px"class="img-thumblin">
+                    <p>Data Structures </p>
+                    <p>Algorithms</p>
+                    <p>Categories:New</p>
+                    <div class="row">
+                        <a href="" class="btn btn-danger btn-sm ">Add Cart</a><a
+                            href="" class="btn btn-success btn-sm ">View Details</a><a
+                            href="" class="btn btn-danger btn-sm">299</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card crd-ho">
+                <div class="card-body text-center">
+                    <img alt="" src="/img/sql.jpg"
+                         style="width: 150px;height: 200px"class="img-thumblin">
+                    <p>Data Structures </p>
+                    <p>Algorithms</p>
+                    <p>Categories:New</p>
+                    <div class="row">
+                        <a href="" class="btn btn-danger btn-sm ml-2">Add Cart</a><a
+                            href="" class="btn btn-success btn-sm ml-1">View Details</a><a
+                            href="" class="btn btn-danger btn-sm ml-1">299</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="text-center mt-1">
+        <a href="" class="btn btn-danger btn-sm text white"> View All</a>
+    </div>
+</div>
+<div class="container">
+    <hr>
+    <h3 class="text-center">New Book</h3>
+    <div class="row">
+        <div class="col-md-3">
+            <div class="card crd-ho">
+                <div class="card-body text-center">
+                    <img alt="" src="/img/algoritms.jpg"
+                         style="width: 150px;height: 200px"class="img-thumblin">
+                    <p>Data Structures </p>
+                    <p>Algorithms</p>
+                    <p>Categories:New</p>
+                    <div class="row">
+                        <a href="" class="btn btn-danger btn-sm ml-2">Add Cart</a><a
+                            href="" class="btn btn-success btn-sm ml-1">View Details</a><a
+                            href="" class="btn btn-danger btn-sm ml-1">299</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card crd-ho">
+                <div class="card-body text-center">
+                    <img alt="" src="/img/gordostightd.jpg"
+                         style="width: 150px;height: 200px"class="img-thumblin">
+                    <p>Data Structures </p>
+                    <p>Algorithms</p>
+                    <p>Categories:New</p>
+                    <div class="row">
+                        <a href="" class="btn btn-danger btn-sm ml-2">Add Cart</a><a
+                            href="" class="btn btn-success btn-sm ml-1">View Details</a><a
+                            href="" class="btn btn-danger btn-sm ml-1">299</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card crd-ho">
+                <div class="card-body text-center">
+                    <img alt="" src="/img/titleptince.jpg"
+                         style="width: 150px;height: 200px"class="img-thumblin">
+                    <p>Data Structures </p>
+                    <p>Algorithms</p>
+                    <p>Categories:New</p>
+                    <div class="row">
+                        <a href="" class="btn btn-danger btn-sm ml-2">Add Cart</a><a
+                            href="" class="btn btn-success btn-sm ml-1">View Details</a><a
+                            href="" class="btn btn-danger btn-sm ml-1">299</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="card crd-ho">
+            <div class="card-body text-center">
+                <img alt="" src="/img/gordostightd.jpg"
+                     style="width: 150px;height: 200px"class="img-thumblin">
+                <p>Data Structures </p>
+                <p>Algorithms</p>
+                <p>Categories:New</p>
+                <div class="row">
+                    <a href="" class="btn btn-danger btn-sm ml-2">Add Cart</a><a
+                        href="" class="btn btn-success btn-sm ml-1">View Details</a><a
+                        href="" class="btn btn-danger btn-sm ml-1">299</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    <div class="text-center mt-1">
+        <a href="" class="btn btn-danger btn-sm text white"> View All</a>
+    </div>
+    <div class="container">
+        <footer class="page-footer font-small mdb-color pt-4">
+            <div class="container text-center text-md-left">
+                <div class="row text-center text-md-left mt-3 pb-3">
+                    <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+                        <h6 class="text-uppercase mb-4 font-weight-bold">Сервис для тех, кто читает.</h6>
+                        <p>
+                            Book Store — место встречи книг и людей. Это сервис, который поможет вам найти
+                            интересные книги и рассказать о них друзьям..</p>
+                    </div>
+                    <hr class="w-100 clearfix d-md-none">
+                    <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+                        <h6 class="text-uppercase mb-4 font-weight-bold">Читателям</h6>
+                        <p><a href="#!">О НАС</a></p>
+                        <p><a href="#!">Часто задаваемые вопросы</a></p>
+                        <p><a href="#!">Где купить</a></p>
+                    </div>
+                    <hr class="w-100 clearfix d-md-none">
+                    <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
+                        <h6 class="text-uppercase mb-4 font-weight-bold">Полезные ссылки</h6>
+                        <p><a href="#!">Link 1</a></p>
+                        <p><a href="#!">Link 2</a></p>
+                        <p><a href="#!">Link 3</a></p>
+                        <p><a href="#!">Link 4</a></p>
+                    </div>
+                    <hr class="w-100 clearfix d-md-none">
+                    <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
+                        <h6 class="text-uppercase mb-4 font-weight-bold">Журнал</h6>
+                        <p><a href="#!">Контакты</a></p>
+                        <p><a href="#!">Правила сайта</a></p>
+                        <p><a href="#!">Полезные статьи</a></p>
+                        <p><a href="#!">Link 4</a></p>
+                    </div>
+                    <div class="col-md-5 col-lg-4 ml-lg-0">
+                        <div class="text-center text-md-right">
+                            <ul class="list-unstyled list-inline">
+                                <li class="list-inline-item">
+                                    <a class="btn-floating btn-sm rgba-white-slight mx-1">
+                                        <i class="fab fa-facebook-f"></i>
+                                    </a>
+                                </li>
+                                <li class="list-inline-item">
+                                    <a class="btn-floating btn-sm rgba-white-slight mx-1">
+                                        <i class="fab fa-twitter"></i>
+                                    </a>
+                                </li>
+                                <li class="list-inline-item">
+                                    <a class="btn-floating btn-sm rgba-white-slight mx-1">
+                                        <i class="fab fa-google-plus-g"></i>
+                                    </a>
+                                </li>
+                                <li class="list-inline-item">
+                                    <a class="btn-floating btn-sm rgba-white-slight mx-1">
+                                        <i class="fab fa-linkedin-in"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+</body>
+</html>
